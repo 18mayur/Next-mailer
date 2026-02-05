@@ -7,7 +7,7 @@ export async function POST() {
  
     const filePath = path.join(
       process.cwd(),
-      "src/emails/mail.html"
+      "src/emails/index.html"
     );
     const htmlContent = fs.readFileSync(filePath, "utf8");
     
