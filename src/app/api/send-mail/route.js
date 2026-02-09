@@ -21,7 +21,7 @@ export async function POST() {
 
     await transporter.sendMail({
       from: `"Next.js Mailer" <${process.env.EMAIL_USER}>`,
-      to: ["mayu2003shinde@gmail.com","yash.onerooftech@gmail.com","mayu2003shinde@outlook.com","yash.galiya@onerooftech.com"], 
+      to: ["mayu2003shinde@gmail.com","crm.onerooftech@gmail.com","sarika.patil@credila.com","karunad@credila.com","padmaja.pai@credila.com","padmajapai1109@gmail.com"], 
       subject: "New Test EMailer",
       html: htmlContent,
     });
