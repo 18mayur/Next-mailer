@@ -4,13 +4,9 @@ import path from "path";
 
 export async function POST() {
   try {
- 
-    const filePath = path.join(
-      process.cwd(),
-      "src/emails/index.html"
-    );
+    const filePath = path.join(process.cwd(), "src/emails/index.html");
     const htmlContent = fs.readFileSync(filePath, "utf8");
-    
+
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -21,7 +17,11 @@ export async function POST() {
 
     await transporter.sendMail({
       from: `"Next.js Mailer" <${process.env.EMAIL_USER}>`,
-      to: ["mayu2003shinde@gmail.com","crm.onerooftech@gmail.com","sarika.patil@credila.com","karunad@credila.com","padmaja.pai@credila.com","padmajapai1109@gmail.com"], 
+      to: [
+        "mayu2003shinde@gmail.com",
+        "sarika.patil@credila.com",
+        "mayur.shinde@onerooftech.com"
+      ],
       subject: "New Test EMailer",
       html: htmlContent,
     });
@@ -29,10 +29,7 @@ export async function POST() {
     return Response.json({ success: true });
   } catch (error) {
     console.error("MAIL ERROR:", error);
-    return Response.json(
-      { success: false },
-      { status: 500 }
-    );
+    return Response.json({ success: false }, { status: 500 });
   }
 }
 
