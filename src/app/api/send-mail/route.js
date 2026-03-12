@@ -20,9 +20,9 @@ export async function POST() {
       to: [
         "mayu2003shinde@gmail.com",
         "sarika.patil@credila.com",
-        "mayur.shinde@onerooftech.com"
+        "mayur.shinde@onerooftech.com",
       ],
-      subject: "New Test EMailer",
+      subject: "New Emailer",
       html: htmlContent,
     });
 
