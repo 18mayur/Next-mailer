@@ -4,7 +4,7 @@ import path from "path";
 
 export async function POST() {
   try {
-    const filePath = path.join(process.cwd(), "src/emails/index.html");
+    const filePath = path.join(process.cwd(), "src/emails/newMail.html");
     const htmlContent = fs.readFileSync(filePath, "utf8");
 
     const transporter = nodemailer.createTransport({
@@ -22,7 +22,7 @@ export async function POST() {
         "sarika.patil@credila.com",
         "mayur.shinde@onerooftech.com",
       ],
-      subject: "New Emailer",
+      subject: "Document Advisory Email",
       html: htmlContent,
     });
 
