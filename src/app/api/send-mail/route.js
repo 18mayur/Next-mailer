@@ -2,12 +2,8 @@ import nodemailer from "nodemailer";
 import fs from "fs";
 import path from "path";
 
-// Define available email templates
 const TEMPLATES = {
-  newMail: {
-    name: "Process Note / SOP Advisory",
-    path: "src/emails/newMail.html",
-  },
+  newMail: "src/emails/newMail.html",
 };
 
 export async function POST(request) {
@@ -22,7 +18,7 @@ export async function POST(request) {
       );
     }
 
-    if (!subject || typeof subject !== "string" || !subject.trim()) {
+    if (!subject || typeof subject !== "string") {
       return Response.json(
         { success: false, message: "Subject is required" },
         { status: 400 }
@@ -50,23 +46,11 @@ export async function POST(request) {
       );
     }
 
-    // Read email template
-    const templateConfig = TEMPLATES[template];
-    const filePath = path.join(process.cwd(), templateConfig.path);
+    // Read template file
+    const templatePath = path.join(process.cwd(), TEMPLATES[template]);
+    const htmlContent = fs.readFileSync(templatePath, "utf8");
 
-    if (!fs.existsSync(filePath)) {
-      return Response.json(
-        {
-          success: false,
-          message: `Template file not found: ${templateConfig.path}`,
-        },
-        { status: 404 }
-      );
-    }
-
-    const htmlContent = fs.readFileSync(filePath, "utf8");
-
-    // Configure email transporter
+    // Create transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -76,26 +60,25 @@ export async function POST(request) {
     });
 
     // Send email
-    await transporter.sendMail({
+    const mailOptions = {
       from: `"Next.js Mailer" <${process.env.EMAIL_USER}>`,
       to: recipients,
-      subject: subject.trim(),
+      subject: subject,
       html: htmlContent,
-    });
+    };
 
-    console.log(`Email sent successfully to ${recipients.length} recipient(s)`);
+    await transporter.sendMail(mailOptions);
 
     return Response.json({
       success: true,
-      message: `Email sent to ${recipients.length} recipient(s)`,
-      recipientCount: recipients.length,
+      message: `Email sent successfully to ${recipients.length} recipient(s)`,
     });
   } catch (error) {
     console.error("MAIL ERROR:", error);
     return Response.json(
       {
         success: false,
-        message: error.message || "Failed to send email",
+        message: "Failed to send email. Please try again later.",
       },
       { status: 500 }
     );
