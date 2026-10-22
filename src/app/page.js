@@ -11,7 +11,7 @@ export default function Home() {
   const [status, setStatus] = useState({ type: null, message: "" });
 
   const availableTemplates = [
-    { id: "newMail", label: "Process Note / SOP Advisory" },
+    { id: "index", label: "Harsh Test Mail" },
   ];
 
   const validateEmails = (emailString) => {

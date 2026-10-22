@@ -1,219 +1,624 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+    xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PostCard Emailer</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="x-apple-disable-message-reformatting" />
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    <title>Kotak Solitaire - Card Migration Notification</title>
+    <!-- Google Fonts: Source Sans 3 & Source Serif 4 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,wght@1,400;1,600&display=swap"
+        rel="stylesheet">
     <style type="text/css">
-        body,
-        table,
-        td,
-        p {
-            margin: 0;
-            padding: 0;
+        /* Reset styles */
+        body {
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+            min-width: 100% !important;
+            -webkit-text-size-adjust: 100% !important;
+            -ms-text-size-adjust: 100% !important;
+            background-color: #f0f0f0;
+            color: #000000;
+            font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif;
         }
 
         table {
-            border-collapse: collapse;
+            border-collapse: collapse !important;
+            mso-table-lspace: 0pt !important;
+            mso-table-rspace: 0pt !important;
         }
 
         img {
-            border: 0;
+            border: 0 !important;
+            outline: none !important;
+            text-decoration: none !important;
+            -ms-interpolation-mode: bicubic;
             display: block;
-            outline: none;
-            text-decoration: none;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+
+        /* Mobile responsive query */
+        @media only screen and (max-width: 650px) {
+            .outer-wrapper {
+                padding: 0 !important;
+            }
+
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+                min-width: 100% !important;
+                table-layout: fixed !important;
+            }
+
+            .fluid-img {
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+            }
+
+            .mobile-padding {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+
+            .mobile-padding-tight {
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+            }
+
+            .mobile-stack {
+                display: block !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+                text-align: center !important;
+            }
+
+            .mobile-block {
+                display: block !important;
+                width: 100% !important;
+                text-align: center !important;
+                margin: 0 auto !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+            }
+
+            .mobile-center-table {
+                margin: 0 auto !important;
+                text-align: center !important;
+                display: table !important;
+                float: none !important;
+            }
+
+            .mobile-hide {
+                display: none !important;
+                visibility: hidden !important;
+                height: 0 !important;
+                width: 0 !important;
+                overflow: hidden !important;
+            }
+
+            .mobile-spacer {
+                display: block !important;
+                height: 18px !important;
+                font-size: 1px !important;
+                line-height: 18px !important;
+            }
+
+            .heading-img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .optout-text {
+                font-size: 14px !important;
+                line-height: 20px !important;
+            }
+
+            .calendar-col {
+                width: 48px !important;
+                padding: 12px 0 12px 8px !important;
+            }
+
+            .calendar-img {
+                width: 32px !important;
+                height: 35px !important;
+            }
+
+            .legal-links {
+                white-space: normal !important;
+            }
         }
     </style>
 </head>
 
-<body style="margin:0; padding:0; background-color:#ffffff; font-family: Inter, Arial, sans-serif;">
+<body
+    style="margin: 0; padding: 0; background-color: #f0f0f0; width: 100% !important; -webkit-font-smoothing: antialiased;">
 
-    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
-        style="background-color:#ffffff;">
+    <!-- Hidden Preview / Preheader Text -->
+    <div
+        style="display: none; font-size: 1px; color: #f0f0f0; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all;">
+        Kotak Delight Platinum Credit Card 2564 is being migrated to Kotak Urbane Credit Card. Your new Kotak Credit
+        Card will be delivered soon.
+        &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+    </div>
+
+    <!-- Outer Centering Table -->
+    <table role="presentation" class="outer-wrapper" width="100%" cellpadding="0" cellspacing="0" border="0"
+        bgcolor="#f0f0f0" style="background-color: #f0f0f0; margin: 0; padding: 20px 0 30px 0; width: 100% !important;">
         <tr>
-            <td align="center">
+            <td align="center" valign="top">
 
-                <!-- MAIN CONTAINER -->
-                <table role="presentation" width="900" cellspacing="0" cellpadding="0" border="0"
-                    style="width:900px; background-image:url('https://next-mailer-three.vercel.app/mailer/postcard-bg.jpg'); background-repeat:no-repeat; background-size:contain;">
-                    <tbody>
-                        <!-- CONTENT ROW -->
-                        <tr>
-                            <td style="padding:20px 0 10px 0; ">
+                <!--[if (gte mso 9)|(IE)]>
+        <table role="presentation" width="650" align="center" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td valign="top">
+        <![endif]-->
 
-                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                                    <tr>
+                <!-- Main Email Container (650px wide) -->
+                <table role="presentation" class="email-container" width="650" cellpadding="0" cellspacing="0"
+                    border="0" bgcolor="#f6e7ec"
+                    style="max-width: 650px; width: 100%; margin: 0 auto; background-color: #f6e7ec; border-collapse: collapse; table-layout: fixed; mso-table-lspace: 0pt; mso-table-rspace: 0pt;">
 
-                                        <!-- LEFT SECTION -->
-                                        <td width="50%" valign="top" style="padding-left:32px;">
+                    <!-- 1. HERO HEADER IMAGE -->
+                    <tr>
+                        <td align="center" valign="top"
+                            style="padding: 0; margin: 0; background-color: #1a1622; width: 100%;">
+                            <img class="fluid-img" src="images/hero_banner.jpg" width="650" height="498"
+                                alt="Kotak Solitaire - Kotak Delight Platinum Credit Card 2564 is being migrated - Your new Kotak Credit Card will be delivered soon"
+                                style="display: block; width: 100%; max-width: 650px; height: auto; border: 0; outline: none; margin: 0; padding: 0;" />
+                        </td>
+                    </tr>
 
-                                            <!-- LOGO -->
-                                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-                                                border="0">
-                                                <tr>
-                                                    <td style="padding-top:0.5rem;">
-                                                        <a href='https://lead.credila.com/?L_SourceContent=PML&L_mx_z_temp_p_name=HCLS28&L_SourceCampaign=StudyAbroad'
-                                                            style="color:#000000;text-decoration:none;" target="_blank">
-                                                            <img src="https://next-mailer-three.vercel.app/mailer/Newbrand.jpg"
-                                                                style="border:none;border-collapse:collapse;"
-                                                                width="250" height="70" alt="Newbrand">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                    <!-- 2. SALUTATION & OPENING PARAGRAPHS -->
+                    <tr>
+                        <td class="mobile-padding" align="left" valign="top"
+                            style="padding: 28px 30px 0 30px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22px; color: #000000;">
+                            <p
+                                style="margin: 0 0 16px 0; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22px; color: #000000; font-weight: normal;">
+                                Dear Customer,
+                            </p>
+                            <p
+                                style="margin: 0 0 16px 0; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22px; color: #000000;">
+                                Effective <strong>16<sup>th</sup> Nov, 2026</strong> your Kotak Delight Platinum Credit
+                                Card 2564 will be discontinued and automatically migrated to the Kotak Urbane Credit
+                                Card.
+                            </p>
+                            <p
+                                style="margin: 0 0 12px 0; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 15px; line-height: 22px; color: #000000;">
+                                Rest assured, this transition is designed to be seamless, ensuring your credit card
+                                experience continues smoothly without any interruption.
+                            </p>
+                        </td>
+                    </tr>
 
-                                            <!-- HEADLINE -->
-                                            <table role="presentation" width="95%" cellspacing="0" cellpadding="0"
-                                                border="0" style="margin-top:16px;">
-                                                <tr>
-                                                    <td>
-                                                        <a href='https://lead.credila.com/?L_SourceContent=PML&L_mx_z_temp_p_name=HCLS28&L_SourceCampaign=StudyAbroad'
-                                                            style="color:#000000;text-decoration:none;" target="_blank">
-                                                            <img src="https://next-mailer-three.vercel.app/mailer/NewtextContent.jpg"
-                                                                width="400" height="120" style="display:block;" alt="Text NewtextContent">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                    <!-- 3. BENEFITS CARD & PILL BADGE -->
+                    <tr>
+                        <td align="center" valign="top" style="padding: 10px 0 0 0; background-color: #f6e7ec;">
+                            <img class="fluid-img" src="images/benefits_card.png" width="650" height="275"
+                                alt="With your new credit card, you will enjoy: 3 Reward points for every Rs 100 spent on eligible purchases; Up to 4 Free PVR Inox movie tickets annually on meeting milestone spends; Earn Reward points on Utility bill payments up to Rs 35,000 utility spends per statement cycle"
+                                style="display: block; width: 100%; max-width: 650px; height: auto; border: 0; outline: none;" />
+                        </td>
+                    </tr>
 
-                                            <!-- DETAILS -->
-                                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-                                                border="0" style="margin-top:20px; color:#777777;">
-                                                <tr>
-                                                    <td style="width: 100%;">
+                    <!-- 4. MORE INFO LINK -->
+                    <tr>
+                        <td class="mobile-padding" align="left" valign="top"
+                            style="padding: 10px 30px 20px 30px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                            For more information on product features and benefits, please click <a
+                                href="https://www.kotak.com" target="_blank"
+                                style="color: #b5626a; text-decoration: underline; font-weight: normal;">here.</a>
+                        </td>
+                    </tr>
 
-                                                        <div style="display: flex;"><span>To:</span>
-                                                            <div
-                                                                style="border-bottom: 2px dashed #aaaaaa; margin-left: 0.4rem; width: 30%;">
-                                                                <span>[FIRSTNAME]</span>
-                                                            </div>
-                                                        </div>
+                    <!-- 5. WHAT THIS MEANS FOR YOU - HEADING -->
+                    <tr>
+                        <td class="mobile-padding" align="left" valign="top" style="padding: 0 30px 14px 30px;">
+                            <img class="heading-img" src="images/heading_what_this_means.png" width="377" height="55"
+                                alt="What this means for you:"
+                                style="display: block; width: 377px; max-width: 100%; height: auto; border: 0;" />
+                        </td>
+                    </tr>
 
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td style="width: 100%;">
-                                                        <div style="display: flex; padding-top: 0.5rem;">
-                                                            <span>From:</span>
-                                                            <div
-                                                                style="border-bottom: 2px dashed #aaaaaa; margin-left: 0.4rem; width: 70%;">
-                                                                <span>Credila Financial Services Limited </span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                                <tr style="margin-top: 0.75rem;">
-                                                    <td style="width: 100%;">
-                                                        <div style="display: flex; padding-top: 0.5rem;">
-                                                            <span>Address:</span>
-                                                            <div
-                                                                style="border-bottom: 2px dashed #aaaaaa; text-align: center; margin-left: 0.4rem; width: 20%;">
-                                                                <span>GERMANY</span>
-                                                            </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                    <!-- 6. BULLET POINTS -->
+                    <tr>
+                        <td class="mobile-padding" align="left" valign="top" style="padding: 0 30px 22px 30px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="border-collapse: collapse;">
 
-                                            <!-- FEATURES -->
-                                            <table role="presentation" width="90%" cellspacing="0" cellpadding="0"
-                                                border="0" style="margin-top:20px;">
-                                                <tr>
-                                                    <td valign="top">
-                                                        <table role="presentation" cellspacing="0" cellpadding="0"
-                                                            border="0">
-                                                            <tr>
-                                                                <td valign="top">
-                                                                    <img src="https://next-mailer-three.vercel.app/mailer/finance.jpg"
-                                                                        width="36" height="36" alt="finance">
-                                                                </td>
-                                                                <td style="padding-left:8px;">
-                                                                    <p style="font-weight:700;">Up to 100% finance
-                                                                    </p>
-                                                                    <p >Including living, travel, etc.</p>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
+                                <!-- Bullet 1 -->
+                                <tr>
+                                    <td valign="top" width="28"
+                                        style="width: 28px; padding-top: 4px; padding-bottom: 10px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="padding-bottom: 10px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        A new credit card will be issued and delivered to your registered address.
+                                    </td>
+                                </tr>
 
-                                                    <td valign="top">
-                                                        <table role="presentation" cellspacing="0" cellpadding="0"
-                                                            border="0">
-                                                            <tr>
-                                                                <td valign="top">
-                                                                    <img src="https://next-mailer-three.vercel.app/mailer/zero-tcs.jpg"
-                                                                        width="36" height="36" alt=" zero-tcs">
-                                                                </td>
-                                                                <td style="padding-left:8px;">
-                                                                    <p style="font-weight:700;">
+                                <!-- Bullet 2 -->
+                                <tr>
+                                    <td valign="top" width="28"
+                                        style="width: 28px; padding-top: 4px; padding-bottom: 10px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="padding-bottom: 10px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        Your existing card benefits will continue until the migration date, i.e.
+                                        <strong>16-11-2026</strong>.
+                                    </td>
+                                </tr>
 
-                                                                        Zero TCS on funds remitted for overseas
-                                                                        education
-                                                                    </p>
-                                                                    <p >As per the Union Budget 25-26</p>
-                                                                </td>
-                                                            </tr>
-                                                        </table>
-                                                    </td>
+                                <!-- Bullet 3 -->
+                                <tr>
+                                    <td valign="top" width="28"
+                                        style="width: 28px; padding-top: 4px; padding-bottom: 10px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="padding-bottom: 10px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        Any outstanding balance or EMIs, unused reward points will be automatically
+                                        carried forward, with no action required from your end.
+                                    </td>
+                                </tr>
 
-                                                </tr>
-                                            </table>
+                                <!-- Bullet 4 -->
+                                <tr>
+                                    <td valign="top" width="28"
+                                        style="width: 28px; padding-top: 4px; padding-bottom: 10px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="padding-bottom: 10px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        Your new Credit Card will have a new card number, expiry date, and CVV. Please
+                                        update your new card details wherever you have active subscriptions, digital
+                                        wallets or recurring payments for seamless experience once the card is
+                                        activated.
+                                    </td>
+                                </tr>
 
-                                        </td>
+                                <!-- Bullet 5 -->
+                                <tr>
+                                    <td valign="top" width="28"
+                                        style="width: 28px; padding-top: 4px; padding-bottom: 10px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="padding-bottom: 10px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        You can easily activate your new credit card within 30 days of receiving it
+                                        through the Kotak Mobile App. <a href="https://www.kotak.com" target="_blank"
+                                            style="color: #b5626a; text-decoration: underline;">Click here.</a>
+                                    </td>
+                                </tr>
 
-                                        <!-- RIGHT SECTION -->
-                                        <td width="50%" style="padding-right: 4rem;" valign="top">
+                                <!-- Bullet 6 -->
+                                <tr>
+                                    <td valign="top" width="28"
+                                        style="width: 28px; padding-top: 4px; padding-bottom: 10px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="padding-bottom: 10px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        Usage of Credit Cards is governed by the Most Important Terms and Conditions
+                                        (MITC) and the Key Fact Statement (KFS). Please <a href="https://www.kotak.com"
+                                            target="_blank" style="color: #b5626a; text-decoration: underline;">click
+                                            here</a> for MITC and &amp; <a href="https://www.kotak.com" target="_blank"
+                                            style="color: #b5626a; text-decoration: underline;">Upgrade Terms &amp;
+                                            Conditions</a>
+                                    </td>
+                                </tr>
 
-                                            <table role="presentation" width="100%" cellspacing="0" cellpadding="0"
-                                                border="0">
-                                                <tr>
-                                                    <td align="center">
-                                                        <a href='https://lead.credila.com/?L_SourceContent=PML&L_mx_z_temp_p_name=HCLS28&L_SourceCampaign=StudyAbroad'
-                                                            style="color:#000000;text-decoration:none;" target="_blank">
-                                                            <img src="https://next-mailer-three.vercel.app/mailer/newPlane.jpg"
-                                                                width="320" height="50" alt="plane image">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td align="center"
-                                                        style="border-left:2.2px solid #000000; padding-top:12px;">
-                                                        <a href="https://lead.credila.com/?L_SourceContent=PML&L_mx_z_temp_p_name=HCLS28&L_SourceCampaign=StudyAbroad"
-                                                            style="color:#000000;text-decoration:none;" target="_blank">
-                                                            <img src="https://next-mailer-three.vercel.app/mailer/postCard.jpg"
-                                                                width="300" alt="postCard">
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
+                                <!-- Bullet 7 -->
+                                <tr>
+                                    <td valign="top" width="28" style="width: 28px; padding-top: 4px;">
+                                        <img src="images/bullet_infinity.png" width="17" height="15" alt="•"
+                                            style="display: block; width: 17px; height: 15px; border: 0;" />
+                                    </td>
+                                    <td valign="top"
+                                        style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                        Please ensure that any pending milestone benefits are redeemed prior to card
+                                        migration.
+                                    </td>
+                                </tr>
 
-                                        </td>
+                            </table>
+                        </td>
+                    </tr>
 
-                                    </tr>
-                                </table>
+                    <!-- 7. OPT-OUT CALLOUT BOX -->
+                    <tr>
+                        <td class="mobile-padding" align="center" valign="top" style="padding: 0 30px 22px 30px;">
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                bgcolor="#d8c0ca"
+                                style="background-color: #d8c0ca; border-radius: 12px; border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
+                                <tr>
+                                    <!-- Calendar Icon -->
+                                    <td class="calendar-col" align="center" valign="middle" width="76"
+                                        style="width: 76px; padding: 18px 0 18px 16px;">
+                                        <img class="calendar-img" src="images/icon_calendar.png" width="44" height="47"
+                                            alt="Calendar"
+                                            style="display: block; width: 44px; height: 47px; border: 0;" />
+                                    </td>
+                                    <!-- Vertical Divider Line -->
+                                    <td width="1" valign="middle" style="width: 1px; padding: 12px 0;">
+                                        <div
+                                            style="width: 1px; height: 46px; background-color: #c9b0ba; font-size: 1px; line-height: 1px;">
+                                            &nbsp;</div>
+                                    </td>
+                                    <!-- Opt-Out Text with Clickable Link -->
+                                    <td class="optout-text mobile-padding-tight" align="left" valign="middle"
+                                        style="padding: 18px 20px 18px 18px; font-family: 'Source Serif 4', Georgia, 'Times New Roman', serif; font-style: italic; font-size: 17px; line-height: 25px; color: #1a1a1a;">
+                                        <span class="serif-text">If you do not wish to migrate to the new credit
+                                            card,<br class="mobile-hide" /> please <a href="https://www.kotak.com"
+                                                target="_blank"
+                                                style="color: #1a1a1a; text-decoration: underline; font-weight: normal;">click
+                                                here</a> to opt out before <strong>16-11-2026</strong>.</span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
 
-                            </td>
-                        </tr>
+                    <!-- 8. IMPORTANT NOTES & CLOSING PARAGRAPHS -->
+                    <tr>
+                        <td class="mobile-padding" align="left" valign="top"
+                            style="padding: 0 30px 18px 30px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                            <p
+                                style="margin: 0 0 12px 0; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                Please note that if any outstanding balance remains on your card, your card will be
+                                migrated to the new card to ensure uninterrupted servicing.
+                            </p>
+                            <p
+                                style="margin: 0 0 12px 0; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                For any assistance or if you wish to opt for a different network, please call us at
+                                <strong style="color: #000000;"><a href="tel:18004100"
+                                        style="color: #000000; text-decoration: none; font-weight: bold;">1800 4100
+                                        (Toll-Free)</a></strong>.
+                            </p>
+                            <p
+                                style="margin: 0; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                                Thank you for banking with us. We look forward to continuing to serve you.
+                            </p>
+                        </td>
+                    </tr>
 
-                        <!-- FOOTER -->
-                        <tr>
-                            <td align="center" style="padding:0px 0 22px 0;">
-                                <a href='https://lead.credila.com/?L_SourceContent=PML&L_mx_z_temp_p_name=HCLS28&L_SourceCampaign=StudyAbroad'
-                                    style="color:#000000;text-decoration:none;" target="_blank">
-                                    <p style="font-size:12px; color: #000000;">
-                                        <i>Formerly known as HDFC Credila Financial Services Limited</i>
-                                    </p>
-                                </a>
-                            </td>
-                        </tr>
+                    <!-- 9. ROSE-GOLD INFINITY DIVIDER -->
+                    <tr>
+                        <td class="mobile-padding" align="center" valign="top" style="padding: 4px 30px 18px 30px;">
+                            <img class="fluid-img" src="images/divider_infinity.png" width="590" height="28"
+                                alt="── ∞ ──"
+                                style="display: block; width: 100%; max-width: 590px; height: auto; border: 0;" />
+                        </td>
+                    </tr>
 
-                    </tbody>
+                    <!-- 10. SIGN-OFF -->
+                    <tr>
+                        <td class="mobile-padding" align="left" valign="top"
+                            style="padding: 0 30px 28px 30px; font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px; color: #000000;">
+                            Warm regards,<br />
+                            Team Kotak Mahindra Bank
+                        </td>
+                    </tr>
+
+                    <!-- 11. GREY FOOTER: APP DOWNLOAD & SOCIAL / CUSTOMER CARE -->
+                    <tr>
+                        <td align="center" valign="top" bgcolor="#eeeeee"
+                            style="background-color: #eeeeee; padding: 18px 20px; border-top: 1px solid #e0e0e0;">
+                            <!--[if (gte mso 9)|(IE)]>
+              <table role="presentation" width="610" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td width="330" valign="middle">
+              <![endif]-->
+                            <table role="presentation" class="mobile-stack mobile-center-table" align="left"
+                                cellpadding="0" cellspacing="0" border="0"
+                                style="margin: 0; display: inline-block; vertical-align: middle;">
+                                <tr>
+                                    <td class="mobile-block" valign="middle"
+                                        style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 12px; line-height: 15px; color: #000000; font-weight: 600; padding-right: 10px;">
+                                        Download the New<br class="mobile-hide" /> Kotak Bank App:
+                                    </td>
+                                    <td class="mobile-block" valign="middle" style="padding-top: 0;">
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                                            class="mobile-center-table" style="margin: 0;">
+                                            <tr>
+                                                <td valign="middle" style="padding-right: 8px;">
+                                                    <a href="https://play.google.com/store/apps/details?id=com.msf.kbank.mobile"
+                                                        target="_blank" style="text-decoration: none;">
+                                                        <img src="images/badge_google_play.png" width="110" height="36"
+                                                            alt="Get it on Google Play"
+                                                            style="display: block; width: 110px; height: 36px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                                <td valign="middle">
+                                                    <a href="https://apps.apple.com/in/app/kotak-811-mobile-banking/id416450309"
+                                                        target="_blank" style="text-decoration: none;">
+                                                        <img src="images/badge_app_store.png" width="110" height="36"
+                                                            alt="Download on the App Store"
+                                                            style="display: block; width: 110px; height: 36px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                  <td width="1" valign="middle" style="padding: 0 10px;">
+                    <div style="width: 1px; height: 46px; background-color: #000000;"></div>
+                  </td>
+                  <td width="260" valign="middle" align="center">
+              <![endif]-->
+
+                            <!-- Spacer for mobile view -->
+                            <div class="mobile-spacer" style="display: none; height: 0; line-height: 0;">&nbsp;</div>
+
+                            <table role="presentation" class="mobile-stack mobile-center-table" align="right"
+                                cellpadding="0" cellspacing="0" border="0"
+                                style="margin: 0; display: inline-block; vertical-align: middle;">
+                                <tr>
+                                    <td align="center" valign="middle" style="padding-left: 0;">
+                                        <!-- Social Icons Row -->
+                                        <table role="presentation" cellpadding="0" cellspacing="0" border="0"
+                                            align="center" style="margin: 0 auto 6px auto;">
+                                            <tr>
+                                                <td style="padding: 0 3px;">
+                                                    <a href="https://www.facebook.com/KotakBank/" target="_blank"
+                                                        style="text-decoration: none;">
+                                                        <img src="images/icon_facebook.png" width="25" height="25"
+                                                            alt="Facebook"
+                                                            style="display: block; width: 25px; height: 25px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 3px;">
+                                                    <a href="https://twitter.com/KotakBankLtd" target="_blank"
+                                                        style="text-decoration: none;">
+                                                        <img src="images/icon_x.png" width="25" height="25" alt="X"
+                                                            style="display: block; width: 25px; height: 25px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 3px;">
+                                                    <a href="https://www.youtube.com/user/kotakbankltd" target="_blank"
+                                                        style="text-decoration: none;">
+                                                        <img src="images/icon_youtube.png" width="25" height="25"
+                                                            alt="YouTube"
+                                                            style="display: block; width: 25px; height: 25px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 3px;">
+                                                    <a href="https://www.linkedin.com/company/kotak-mahindra-bank"
+                                                        target="_blank" style="text-decoration: none;">
+                                                        <img src="images/icon_linkedin.png" width="25" height="25"
+                                                            alt="LinkedIn"
+                                                            style="display: block; width: 25px; height: 25px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                                <td style="padding: 0 3px;">
+                                                    <a href="https://www.instagram.com/kotakbankltd/" target="_blank"
+                                                        style="text-decoration: none;">
+                                                        <img src="images/icon_instagram.png" width="25" height="25"
+                                                            alt="Instagram"
+                                                            style="display: block; width: 25px; height: 25px; border: 0;" />
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                        <!-- Customer Care Phone -->
+                                        <div
+                                            style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 11px; line-height: 15px; color: #000000; margin-bottom: 2px; text-align: center;">
+                                            Customer Care: <a href="tel:18004100"
+                                                style="color: #000000; text-decoration: underline; font-weight: bold;">1800
+                                                4100</a> (Toll-Free)
+                                        </div>
+                                        <!-- Legal Disclaimer Links -->
+                                        <div class="legal-links"
+                                            style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 8.5px; line-height: 12px; color: #333333; text-align: center;">
+                                            <a href="https://www.kotak.com" target="_blank"
+                                                style="color: #333333; text-decoration: none;">Terms &amp;
+                                                Conditions</a> |
+                                            <a href="https://www.kotak.com" target="_blank"
+                                                style="color: #333333; text-decoration: none;">Copyright &amp;
+                                                Disclaimer</a> |
+                                            <a href="https://www.kotak.com" target="_blank"
+                                                style="color: #333333; text-decoration: none;">Privacy Policy</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                            <!--[if (gte mso 9)|(IE)]>
+                  </td>
+                </tr>
+              </table>
+              <![endif]-->
+                        </td>
+                    </tr>
+
+                    <!-- 12. WHITE FOOTER: SECURITY & SYSTEM NOTICE -->
+                    <tr>
+                        <td align="center" valign="top" bgcolor="#ffffff"
+                            style="background-color: #ffffff; padding: 16px 20px 14px 20px;">
+
+                            <!-- Shield + Secure Banking Line -->
+                            <table role="presentation" cellpadding="0" cellspacing="0" border="0" align="center"
+                                style="margin: 0 auto 6px auto;">
+                                <tr>
+                                    <td valign="middle" style="padding-right: 6px;">
+                                        <img src="images/icon_shield.png" width="12" height="14" alt="Security Shield"
+                                            style="display: block; width: 12px; height: 14px; border: 0;" />
+                                    </td>
+                                    <td valign="middle"
+                                        style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 13px; line-height: 18px; color: #000000;">
+                                        Stay safe while banking - <a href="https://www.kotak.com" target="_blank"
+                                            style="color: #0056b3; text-decoration: underline; font-weight: bold;">click</a>
+                                        here to read secure banking tips in your preferred language.
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- Calls notice -->
+                            <div
+                                style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 11px; line-height: 16px; color: #444444; margin-bottom: 12px; text-align: center;">
+                                Don&rsquo;t miss calls starting with 1600 [important service and account-related
+                                updates], and 140 [personalised offers and exclusive deals].
+                            </div>
+
+                            <!-- Separator Line -->
+                            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
+                                style="margin: 0 0 10px 0;">
+                                <tr>
+                                    <td style="border-top: 1px solid #777777; font-size: 1px; line-height: 1px;">&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <!-- System generated note -->
+                            <div
+                                style="font-family: 'Source Sans 3', 'Source Sans Pro', Arial, Helvetica, sans-serif; font-size: 10.5px; line-height: 15px; color: #555555; text-align: center;">
+                                Please do not reply. This is a system generated mail.
+                            </div>
+
+                        </td>
+                    </tr>
+
+                    <!-- 13. BOTTOM KOTAK RED BRAND BAR -->
+                    <tr>
+                        <td bgcolor="#f51431" height="6"
+                            style="background-color: #f51431; height: 6px; font-size: 1px; line-height: 1px;">
+                            &nbsp;
+                        </td>
+                    </tr>
 
                 </table>
+
+                <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+        <![endif]-->
+
             </td>
         </tr>
     </table>
+
 </body>
 
 </html>

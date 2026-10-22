@@ -3,7 +3,7 @@ import fs from "fs";
 import path from "path";
 
 const TEMPLATES = {
-  newMail: "src/emails/newMail.html",
+  newMail: "src/emails/index.html",
 };
 
 export async function POST(request) {
