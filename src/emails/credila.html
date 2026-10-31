@@ -1,0 +1,121 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Awareness Emailer</title>
+    <style type="text/css">
+        /* Client-specific resets */
+        body,
+        table,
+        td,
+        p,
+        h1,
+        span {
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            /* mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt; */
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            -ms-interpolation-mode: bicubic;
+            display: block;
+        }
+
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        /* Mobile responsiveness */
+        @media only screen and (max-width: 620px) {
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .responsive-img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            .px-mobile {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0; background-color: #ecf1f6;">
+    <!-- Outer wrapper table -->
+    <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%"
+        style="background-color: #ecf1f6;">
+        <tr>
+            <td align="center" valign="top" style="padding: 10px;">
+
+                <!-- Main content table -->
+                <table role="presentation" class="email-container" cellspacing="0" cellpadding="0" border="0"
+                    width="600"
+                    style="width: 600px; max-width: 600px; background-color: #ffffff; border: 1px solid #000000; margin: 0 auto; font-family: 'Inter', Arial, Helvetica, sans-serif;">
+
+                    <!-- Header banner image -->
+                    <tr>
+                        <td align="center" style="padding: 0px;">
+                            <img src="./images/awareness_Banner.jpg" alt="Don't Delay Your Education Plans" width="600"
+                                class="responsive-img"
+                                style="display: block; width: 100%; max-width: 600px; height: auto; border: 0;" />
+                        </td>
+                    </tr>
+
+                    <!-- Body copy -->
+                    <tr>
+                        <td class="px-mobile" align="left"
+                            style="padding: 24px 24px 8px 24px; color: #000000; font-family: 'Inter', Arial, Helvetica, sans-serif; font-size: 16px; line-height: 24px;">
+                            <p style="margin: 0 0 16px 0;">Hi <span>[FIRSTNAME],</span></p>
+
+                            <p style="margin: 0 0 12px 0;">
+                                Thanks for starting your application with Credila.
+                            </p>
+
+                            <p style="margin: 0 0 12px 0;">Please refer to the below documents checklist and keep
+                                them ready to
+                                process your application.</p>
+
+                            <p style="margin: 0 0 12px 0;">
+                                Your Relationship Manager, [RM_NAME] is here to help you complete the
+                                remaining steps and assist with any documents or questions you may have.
+                            </p>
+                            <p style="margin: 0 0 12px 0;">
+                                You can call or WhatsApp on [RM_MOBILE] for quick support.
+                            </p>
+                        </td>
+                    </tr>
+                    <!-- Footer banner image -->
+                    <tr>
+                        <td align="center" style="padding: 0px;">
+                            <img src="./images/content.jpg" alt="Credila Footer" width="600" class="responsive-img"
+                                style="display: block; width: 100%; max-width: 600px; height: auto; border: 0;" />
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
