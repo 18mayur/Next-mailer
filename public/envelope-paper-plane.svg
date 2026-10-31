@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Envelope and paper airplane logo</title>
+  <g>
+    <!-- Envelope body -->
+    <path fill="#F49A1B" d="M26 0h394c14.4 0 26 11.6 26 26v254c0 14.4-11.6 26-26 26H26C11.6 306 0 294.4 0 280V26C0 11.6 11.6 0 26 0Z"/>
+    <!-- Side folds -->
+    <path fill="#F5A01C" d="M0 36 153 143 9 302c-6-5-9-13-9-22V36Z"/>
+    <path fill="#F5A01C" d="M446 36 293 143l144 159c6-5 9-13 9-22V36Z"/>
+    <!-- Lower envelope fold -->
+    <path fill="#E77D25" d="m9 302 144-159 35 22c21 16 43 16 70 0l35-22 144 159c-5 3-11 4-17 4H26c-6 0-12-1-17-4Z"/>
+    <!-- Top flap -->
+    <path fill="#F5C51B" d="M26 0h394c14.4 0 26 11.6 26 26v10L258 165c-22 16-46 16-70 0L0 36V26C0 11.6 11.6 0 26 0Z"/>
+  </g>
+
+  <!-- Paper airplane -->
+  <path fill="#7DD3FC" d="M167 329 512 194 433 402 352 379 290 457 245 350Z"/>
+  <path fill="#28577F" d="m245 350 267-156-207 172-15 91Z"/>
+  <path fill="#38A9E8" d="m305 366 47 13-62 78Z"/>
+
+  <!-- Motion strokes -->
+  <path d="m116 505 111-92" fill="none" stroke="#FF5268" stroke-width="17" stroke-linecap="round"/>
+  <path d="m210 487 28-27" fill="none" stroke="#27A9E8" stroke-width="17" stroke-linecap="round"/>
+</svg>

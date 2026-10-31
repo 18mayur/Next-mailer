@@ -1,56 +1,29 @@
 import nodemailer from "nodemailer";
-import fs from "fs";
-import path from "path";
 
-const TEMPLATES = {
-  newMail: "src/emails/index.html",
-};
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export async function POST(request) {
   try {
-    const { recipients, subject, template } = await request.json();
+    const { recipients, subject, html } = await request.json();
 
-    // Validation
-    if (!recipients || !Array.isArray(recipients) || recipients.length === 0) {
-      return Response.json(
-        { success: false, message: "No recipients provided" },
-        { status: 400 }
-      );
+    if (!Array.isArray(recipients) || recipients.length === 0) {
+      return Response.json({ success: false, message: "No recipients provided" }, { status: 400 });
     }
-
     if (!subject || typeof subject !== "string") {
-      return Response.json(
-        { success: false, message: "Subject is required" },
-        { status: 400 }
-      );
+      return Response.json({ success: false, message: "Subject is required" }, { status: 400 });
+    }
+    if (!html || typeof html !== "string") {
+      return Response.json({ success: false, message: "HTML content is required" }, { status: 400 });
     }
 
-    if (!template || !TEMPLATES[template]) {
-      return Response.json(
-        { success: false, message: "Invalid template selected" },
-        { status: 400 }
-      );
-    }
-
-    // Validate email addresses
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const invalidEmails = recipients.filter((email) => !emailRegex.test(email));
-
+    const invalidEmails = recipients.filter((email) => !EMAIL_REGEX.test(email));
     if (invalidEmails.length > 0) {
       return Response.json(
-        {
-          success: false,
-          message: `Invalid email addresses: ${invalidEmails.join(", ")}`,
-        },
+        { success: false, message: `Invalid email addresses: ${invalidEmails.join(", ")}` },
         { status: 400 }
       );
     }
 
-    // Read template file
-    const templatePath = path.join(process.cwd(), TEMPLATES[template]);
-    const htmlContent = fs.readFileSync(templatePath, "utf8");
-
-    // Create transporter
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -59,15 +32,12 @@ export async function POST(request) {
       },
     });
 
-    // Send email
-    const mailOptions = {
+    await transporter.sendMail({
       from: `"Next.js Mailer" <${process.env.EMAIL_USER}>`,
       to: recipients,
-      subject: subject,
-      html: htmlContent,
-    };
-
-    await transporter.sendMail(mailOptions);
+      subject,
+      html,
+    });
 
     return Response.json({
       success: true,
@@ -76,10 +46,7 @@ export async function POST(request) {
   } catch (error) {
     console.error("MAIL ERROR:", error);
     return Response.json(
-      {
-        success: false,
-        message: "Failed to send email. Please try again later.",
-      },
+      { success: false, message: "Failed to send email. Please try again later." },
       { status: 500 }
     );
   }
